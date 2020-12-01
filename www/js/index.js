@@ -73,6 +73,10 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
+        //this.oneSignal();
+
+        this.getIds();
+
     if (JSON.parse(ultimo_capitulo_lido)) {
       fn.pushPage({'id': 'textoLivro.html', 'title': ultimo_livro_lido_abr+'||'+ultimo_livro_lido+'||200||'+ultimo_capitulo_lido});
     }
@@ -94,8 +98,8 @@ var app = {
   },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
-    this.oneSignal();
-    this.getIds();
+    //this.oneSignal();
+    //this.getIds();
     this.buscaNotificacoes();
   },
   oneSignal: function() {
@@ -670,6 +674,7 @@ var app = {
   },
   getIds: function() {
     window.plugins.OneSignal.getIds(function(ids) {
+      alert(ids.userId)
       window.localStorage.setItem('playerID', ids.userId);
       window.localStorage.setItem('pushToken', ids.pushToken);
     });
@@ -678,6 +683,7 @@ var app = {
       if (user) {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
+        alert(uid)
         window.localStorage.setItem('uid',uid);
       }
     });
