@@ -9,59 +9,59 @@
   "installed_plugins": {
     "cordova-admob-sdk": {
       "PLAY_SERVICES_VERSION": "11.0.4",
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-clipboard": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-admob-free": {
       "ADMOB_APP_ID": "ca-app-pub-7091486462236476~9169161472",
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-insomnia": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-plugin-x-socialsharing": {
       "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-promise-polyfill": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova-support-google-services": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "cordova.plugins.diagnostic": {
       "ANDROID_SUPPORT_VERSION": "28.+",
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "phonegap-plugin-multidex": {
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     },
     "phonegap-plugin-push": {
       "FCM_VERSION": "11.6.2",
-      "PACKAGE_NAME": "com.phonegap.climahojemobile"
+      "PACKAGE_NAME": "br.com.innovatesoft.bibliaarc"
     }
   },
   "dependent_plugins": {}

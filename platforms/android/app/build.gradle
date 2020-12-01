@@ -91,10 +91,10 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-support-google-services/climahojemobile-build.gradle"
-apply from: "../onesignal-cordova-plugin/climahojemobile-build-extras-onesignal.gradle"
-apply from: "../phonegap-plugin-multidex/climahojemobile-multidex.gradle"
-apply from: "../phonegap-plugin-push/climahojemobile-push.gradle"
+apply from: "../cordova-support-google-services/bibliaarc-build.gradle"
+apply from: "../onesignal-cordova-plugin/bibliaarc-build-extras-onesignal.gradle"
+apply from: "../phonegap-plugin-multidex/bibliaarc-multidex.gradle"
+apply from: "../phonegap-plugin-push/bibliaarc-push.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
