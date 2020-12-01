@@ -59,7 +59,7 @@
               "count": 1
             },
             {
-              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-7091486462236476~7559328923\" />",
+              "xml": "<meta-data android:name=\"com.google.android.gms.ads.APPLICATION_ID\" android:value=\"ca-app-pub-7091486462236476~9169161472\" />",
               "count": 1
             },
             {
@@ -207,7 +207,7 @@
       "PACKAGE_NAME": "com.phonegap.climahojemobile"
     },
     "cordova-plugin-admob-free": {
-      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~7559328923",
+      "ADMOB_APP_ID": "ca-app-pub-7091486462236476~9169161472",
       "PACKAGE_NAME": "com.phonegap.climahojemobile"
     },
     "cordova-plugin-console": {
