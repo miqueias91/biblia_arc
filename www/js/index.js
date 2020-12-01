@@ -668,7 +668,6 @@ var app = {
   },
   getIds: function() {
     window.plugins.OneSignal.getIds(function(ids) {
-      alert(ids.userId)
       window.localStorage.setItem('playerID', ids.userId);
       window.localStorage.setItem('pushToken', ids.pushToken);
     });
@@ -677,7 +676,6 @@ var app = {
       if (user) {
         var isAnonymous = user.isAnonymous;
         var uid = user.uid;
-        alert(uid)
         window.localStorage.setItem('uid',uid);
       }
     });
