@@ -73,8 +73,8 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
-        this.oneSignal();
-        this.getIds();
+    //this.oneSignal();
+    //this.getIds();
 
     if (JSON.parse(ultimo_capitulo_lido)) {
       fn.pushPage({'id': 'textoLivro.html', 'title': ultimo_livro_lido_abr+'||'+ultimo_livro_lido+'||200||'+ultimo_capitulo_lido});
@@ -88,17 +88,12 @@ var app = {
   // Bind any cordova events here. Common events are:
   // 'pause', 'resume', etc.
   onDeviceReady: function() {    
-    window.FirebasePlugin.getToken(function(token) {
-      alert(token);             
-    }, function(error) {                
-      console.error(error);           
-    });                
     this.receivedEvent('deviceready');  
   },
   // Update DOM on a Received Event
   receivedEvent: function(id) {
-    //this.oneSignal();
-    //this.getIds();
+    this.oneSignal();
+    this.getIds();
     this.buscaNotificacoes();
   },
   oneSignal: function() {
