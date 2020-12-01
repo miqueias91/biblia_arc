@@ -73,8 +73,7 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
-        //this.oneSignal();
-
+        this.oneSignal();
         this.getIds();
 
     if (JSON.parse(ultimo_capitulo_lido)) {
