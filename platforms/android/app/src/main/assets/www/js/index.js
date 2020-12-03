@@ -17,7 +17,7 @@ var modo_noturno = JSON.parse(localStorage.getItem('modo-noturno') || false);
 localStorage.setItem("modo-noturno", modo_noturno);
 
 if (!window.localStorage.getItem('versao-biblia')) {
-  localStorage.setItem("versao-biblia", 'aa'); 
+  localStorage.setItem("versao-biblia", 'arc'); 
 }
 var versaoId = window.localStorage.getItem('versao-biblia');
 
@@ -73,6 +73,9 @@ window.fn.hideDialog = function (id) {
 var app = {
   // Application Constructor
   initialize: function() {
+    //this.oneSignal();
+    //this.getIds();
+
     if (JSON.parse(ultimo_capitulo_lido)) {
       fn.pushPage({'id': 'textoLivro.html', 'title': ultimo_livro_lido_abr+'||'+ultimo_livro_lido+'||200||'+ultimo_capitulo_lido});
     }
@@ -95,7 +98,7 @@ var app = {
   },
   oneSignal: function() {
     window.plugins.OneSignal
-    .startInit("ecf7845e-b569-49e8-ab05-cc8dea377b03")   
+    .startInit("830445a6-372d-42b3-98c3-52785d6f2c46")   
     .handleNotificationOpened(function(jsonData) {
       var mensagem = JSON.parse(JSON.stringify(jsonData['notification']['payload']['additionalData']['mensagem']));
       ons.notification.alert(
@@ -169,7 +172,7 @@ var app = {
     modo_noturno = JSON.parse(localStorage.getItem('modo-noturno'));
 
     $("#textoLivro").html('');
-    var versaoId = versaoId || "aa";
+    var versaoId = versaoId || "arc";
     var selector = this;
     var texts = [];
 
@@ -383,7 +386,7 @@ var app = {
   },
   buscaVersiculo: function(versaoId,livro_capitulo_versiculo, id) {
     $("#textoLivro").html('');
-    var versaoId = versaoId || "aa";
+    var versaoId = versaoId || "arc";
     var selector = this;
     var texts = [];
     var dados0 = livro_capitulo_versiculo.split('||');
@@ -419,7 +422,7 @@ var app = {
 
           for(var i = start; i <=  end; i++){
             if (myBook.chapters[obj_v.chapter - 1][i]) {
-                obj_v.text += '<ons-list-item>'+
+                obj_v.text += '<ons-list-item onclick="fn.pushPage({\'id\': \'textoLivro.html\', \'title\': \''+myBook.abbrev+'||'+myBook.name+'||'+myBook.chapters.length+'||'+(parseInt(capitulo))+'\'});">'+
                   '<p style="font-size: 20px;line-height:30px;text-align:justify">'+
                     myBook.chapters[obj_v.chapter - 1][i] +
                   '</p>'+
@@ -443,7 +446,7 @@ var app = {
     var versiculo = (dados1[1]-1);
     $.ajax({
       type : "GET",
-      url : "js/aa.json",
+      url : "js/arc.json",
       dataType : "json",
       success : function(data){
         $(selector).each(function(){
@@ -593,7 +596,7 @@ var app = {
     }
   },
   pesquisaBiblia: function(term){
-    var versaoId = versaoId || "aa";
+    var versaoId = versaoId || "arc";
 
     if (term != '') {
       term = term.toLowerCase();
@@ -695,7 +698,7 @@ var app = {
           'uid': uid,
           'datacadastro': this.dateTime(),
           'ultimoacesso': this.dateTime(),
-          'app': 'aa',
+          'app': 'arc',
         },
         error: function(e) {
         },
@@ -720,7 +723,7 @@ var app = {
   buscaNotificacoes: function(){
     var uid = window.localStorage.getItem('uid');
     if (uid) {
-      firebase.database().ref('notificacoes').child(uid).child('aa').on('value', (snapshot) => {
+      firebase.database().ref('notificacoes').child(uid).child('arc').on('value', (snapshot) => {
         //localStorage.removeItem("lista-notificacoes");
         var notificacoes = snapshot.val();
         if (notificacoes) {
@@ -735,7 +738,7 @@ var app = {
             lista_notificacao.push({id: hash, titulo: titulo, mensagem: mensagem, lido: lido, data_notificacao: data_notificacao, link: link});
             localStorage.setItem("lista-notificacoes", JSON.stringify(lista_notificacao));
           });
-          firebase.database().ref('notificacoes').child(uid).child('aa').remove();
+          firebase.database().ref('notificacoes').child(uid).child('arc').remove();
         }
       });
     }
