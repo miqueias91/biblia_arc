@@ -1,6 +1,6 @@
 {
   "name": "br.com.innovatesoft.bibliaarc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -51,5 +51,7 @@
       "android"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cordova-android": "^9.0.0"
+  }
 }
