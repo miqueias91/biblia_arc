@@ -1,3 +1,3 @@
-# Bible Almeida Revised Biblical Press (AA)
+# The Holy Bible Revised and Corrected
 
-The Holy Bible Almeida Revised Biblical Press (AA) is a Revised version of the Translation by João Ferreira de Almeida According to the Best Hebrew and Greek Texts.
+The Holy Bible Revised and Corrected is an evangelical translation of the Bible, the result of the revision in 1898. It is a Revised version of the Translation by João Ferreira de Almeida According to the Best Texts in Hebrew and Greek.
