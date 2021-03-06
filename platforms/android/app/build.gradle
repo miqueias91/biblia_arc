@@ -29,7 +29,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
 
@@ -144,7 +144,8 @@ cdvBuildRelease.dependsOn {
     return computeBuildTargetName(false)
 }
 
-task cdvPrintProps << {
+task cdvPrintProps {
+    doLast{
     println('cdvCompileSdkVersion=' + cdvCompileSdkVersion)
     println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
     println('cdvVersionCode=' + cdvVersionCode)
@@ -158,13 +159,18 @@ task cdvPrintProps << {
     android.productFlavors.each { flavor ->
         println('computed' + flavor.name.capitalize() + 'VersionCode=' + flavor.versionCode)
     }
+    }
 }
 
 android {
 
+
+
+
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId privateHelpers.extractStringFromManifest("package")
+        minSdkVersion 19
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
