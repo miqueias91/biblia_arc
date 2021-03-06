@@ -724,7 +724,7 @@ var app = {
           'uid': uid,
           'datacadastro': this.dateTime(),
           'ultimoacesso': this.dateTime(),
-          'app': 'abs',
+          'app': 'arc',
         },
         error: function(e) {
         },
